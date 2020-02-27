@@ -1,0 +1,9 @@
+{
+  "name": "com.takanora.animation-event-editor",
+  "version": "1.0.0",
+  "displayName": "Animation Event Editor",
+  "author": {
+    "name": "Takanori Shibasaki",
+    "url": "https://github.com/takazerker"
+  }
+}
