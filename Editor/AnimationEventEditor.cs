@@ -18,6 +18,7 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
+using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
 using UnityEngine;
@@ -471,6 +472,14 @@ class AnimationEventEditor : EditorWindow
             if (GUILayout.Button("Paste", EditorStyles.toolbarButton, GUILayout.ExpandWidth(false)))
             {
                 PasteAnimationEvents();
+            }
+
+            GUI.enabled = 0 < mEvents.Length;
+
+            if (GUILayout.Button("Select All", EditorStyles.toolbarButton, GUILayout.ExpandWidth(false)))
+            {
+                mSelectedEvents.Clear();
+                mSelectedEvents.AddRange(Enumerable.Range(0, mEvents.Length));
             }
 
             GUILayout.FlexibleSpace();
