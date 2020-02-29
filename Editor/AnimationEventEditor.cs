@@ -104,6 +104,7 @@ class AnimationEventEditor : EditorWindow
     struct SerializedAnimationEvent
     {
         public float Time;
+        public string FunctionName;
         public float FloatParameter;
         public int IntParameter;
         public string StringParameter;
@@ -112,6 +113,7 @@ class AnimationEventEditor : EditorWindow
         public SerializedAnimationEvent(AnimationEvent e)
         {
             Time = e.time;
+            FunctionName = e.functionName;
             FloatParameter = e.floatParameter;
             IntParameter = e.intParameter;
             StringParameter = e.stringParameter;
@@ -122,6 +124,7 @@ class AnimationEventEditor : EditorWindow
         {
             AnimationEvent ev = new AnimationEvent();
             ev.time = Time;
+            ev.functionName = FunctionName;
             ev.floatParameter = FloatParameter;
             ev.intParameter = IntParameter;
             ev.stringParameter = StringParameter;
